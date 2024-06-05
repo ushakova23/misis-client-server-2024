@@ -1,0 +1,39 @@
+{
+  "project" : {
+    "id" : "moj_code_dlya_smarta-4177067-Qsi",
+    "name" : "moj_code_dlya_smarta-4177067-Qsi",
+    "folder" : "/jaicp"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "Europe/Moscow",
+    "extendedSettings" : {
+      "tokenizerEngine" : "default"
+    },
+    "businessShared" : false,
+    "business" : false
+  },
+  "intents" : [ {
+    "id" : 768460,
+    "path" : "/пока",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "пока"
+    } ]
+  }, {
+    "id" : 768461,
+    "path" : "/привет",
+    "enabled" : true,
+    "businessShared" : false,
+    "business" : false,
+    "phrases" : [ {
+      "text" : "привет"
+    } ]
+  } ],
+  "entities" : [ ],
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
+}
