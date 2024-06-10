@@ -17,7 +17,7 @@ theme: /
             "Давай приготовим какао с бананом"
             
     state: ВыходВГлавноеМеню
-        q!: [в] (главное меню|выход)
+        q!: (к списку рецептов|список рецептов)
         a: Хорошо
         script:
             addAction({
@@ -34,7 +34,9 @@ theme: /
             a: ""
         script:
             var itemId = findItemIdBySelectedItem(getRequest($context));
-
+            
+            log($context.request.rawRequest.payload.meta.current_app.state)
+            
             if (itemId !== null) {
                 addAction({
                     type: "goto_drink",
@@ -57,7 +59,7 @@ theme: /
         else: 
             a: Что-то пошло не так
         buttons:
-            "В главное меню"
+            "К списку рецептов"
             "Давай приготовим чай матча"
     
     state: ПереходРецептПоНомеру
@@ -80,6 +82,6 @@ theme: /
 
     state: Fallback || noContext=true
         event!: noMatch
-        a: Запрос не был понят. Можно выбрать напиток, например, «Давай приготовим какао с бананом», или использовать команду выход для возврата в главное меню.
+        a: Я не понимаю. Можно выбрать напиток, например, «Давай приготовим какао с бананом», или использовать команду "К списку рецептов".
 
 
